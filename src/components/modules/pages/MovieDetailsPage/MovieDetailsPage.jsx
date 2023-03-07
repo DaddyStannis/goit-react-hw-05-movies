@@ -32,7 +32,7 @@ const MovieDetailPage = () => {
       .finally(() => {
         setLoading(false);
       });
-  }, []);
+  }, [movieId]);
 
   useEffect(() => {
     if (movie) {

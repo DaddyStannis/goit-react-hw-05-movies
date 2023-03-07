@@ -13,7 +13,7 @@ const ReviewsPage = () => {
     fetchMovieReviews(movieId).then(data => {
       setReviews(data.results);
     });
-  }, []);
+  }, [movieId]);
 
   const elements = reviews.map(review => {
     const updated = new Date(review.updated_at);

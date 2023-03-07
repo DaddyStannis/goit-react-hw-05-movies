@@ -13,7 +13,7 @@ const CastPage = () => {
     fetchMovieCast(movieId).then(data => {
       setCast(data.cast);
     });
-  }, []);
+  }, [movieId]);
 
   const elements = cast.map(actor => {
     return (
