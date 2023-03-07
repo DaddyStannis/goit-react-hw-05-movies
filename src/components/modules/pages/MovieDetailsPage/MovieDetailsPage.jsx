@@ -22,23 +22,23 @@ const MovieDetailPage = () => {
   const location = useLocation();
 
   useEffect(() => {
+    setLoading(true);
     fetchMovieDetail(movieId)
       .then(data => {
         setMovie(data);
       })
       .catch(error => {
         setError(error.message);
-      })
-      .finally(() => {
-        setLoading(false);
       });
   }, [movieId]);
 
   useEffect(() => {
     if (movie) {
-      fetchImage(movie.poster_path).then(blob => {
-        setPoster(URL.createObjectURL(blob));
-      });
+      fetchImage(movie.poster_path)
+        .then(blob => {
+          setPoster(URL.createObjectURL(blob));
+        })
+        .finally(() => setLoading(false));
     }
   }, [movie]);
 

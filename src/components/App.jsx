@@ -1,11 +1,18 @@
 import { Routes, Route } from 'react-router-dom';
+import { lazy } from 'react';
 import SharedLoyaut from './shared/components/SharedLoyaut/SharedLoyaut';
-import HomePage from './modules/pages/HomePage/HomePage';
-import MoviesPage from './modules/pages/MoviesPage/MoviesPage';
-import MovieDetailPage from './modules/pages/MovieDetailsPage/MovieDetailsPage';
-import CastPage from './modules/pages/MovieDetailsPage/CastPage/CastPage';
-import ReviewsPage from './modules/pages/MovieDetailsPage/ReviewsPage/ReviewsPage';
-import Page404 from './modules/pages/Page404/Page404';
+const HomePage = lazy(() => import('./modules/pages/HomePage/HomePage'));
+const MoviesPage = lazy(() => import('./modules/pages/MoviesPage/MoviesPage'));
+const MovieDetailPage = lazy(() =>
+  import('./modules/pages/MovieDetailsPage/MovieDetailsPage')
+);
+const CastPage = lazy(() =>
+  import('./modules/pages/MovieDetailsPage/CastPage/CastPage')
+);
+const ReviewsPage = lazy(() =>
+  import('./modules/pages/MovieDetailsPage/ReviewsPage/ReviewsPage')
+);
+const Page404 = lazy(() => import('./modules/pages/Page404/Page404'));
 
 export const App = () => {
   return (
