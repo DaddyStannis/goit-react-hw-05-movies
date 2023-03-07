@@ -10,8 +10,8 @@ import Page404 from './modules/pages/Page404/Page404';
 export const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<SharedLoyaut />}>
-        <Route index element={<HomePage />} end></Route>
+      <Route path="/" element={<SharedLoyaut />} end>
+        <Route index element={<HomePage />}></Route>
         <Route path="search/search-movie/" element={<MoviesPage />}></Route>
         <Route path="movies/:movieId" element={<MovieDetailPage />}>
           <Route path="cast" element={<CastPage />}></Route>
