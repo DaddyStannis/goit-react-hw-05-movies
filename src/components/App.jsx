@@ -11,7 +11,7 @@ export const App = () => {
   return (
     <Routes>
       <Route path="/" element={<SharedLoyaut />}>
-        <Route index element={<HomePage />}></Route>
+        <Route index element={<HomePage />} end></Route>
         <Route path="search/search-movie/" element={<MoviesPage />}></Route>
         <Route path="movies/:movieId" element={<MovieDetailPage />}>
           <Route path="cast" element={<CastPage />}></Route>
