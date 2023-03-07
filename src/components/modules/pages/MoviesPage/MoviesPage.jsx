@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { useSearchMovie } from 'components/shared/hooks/hooks';
-import styles from './movies-page.module.css';
 import Searchbar from './Searchbar/Searchbar';
 import MovieList from 'components/shared/components/MovieList/MovieList';
 import Loader from 'components/shared/components/Loader/Loader';

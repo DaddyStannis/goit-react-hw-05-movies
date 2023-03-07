@@ -1,10 +1,8 @@
 import { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import MovieList from 'components/shared/components/MovieList/MovieList';
 import Loader from 'components/shared/components/Loader/Loader';
 import ErrorField from 'components/shared/components/ErrorField/ErrorField';
 import { fetchTrendingMoviesOfDay } from 'components/api/movies-api';
-import styles from './home-page.module.css';
 
 const HomePage = () => {
   const [movies, setMovies] = useState([]);

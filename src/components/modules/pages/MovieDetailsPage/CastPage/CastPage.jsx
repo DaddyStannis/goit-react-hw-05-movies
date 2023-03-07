@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchMovieCast } from 'components/api/movies-api';
 import { IMG_IS_MISSING } from 'components/shared/utils/utils';
-import styles from './cast-page.module.css';
 
 const CastPage = () => {
   const [cast, setCast] = useState([]);

@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchMovieReviews } from 'components/api/movies-api';
 import { addLeadingZero } from 'components/shared/utils/utils';
-import styles from './reviews-page.module.css';
 
 const ReviewsPage = () => {
   const [reviews, setReviews] = useState([]);

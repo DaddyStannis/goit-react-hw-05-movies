@@ -1,5 +1,4 @@
 import { Routes, Route } from 'react-router-dom';
-import * as api from './api/movies-api';
 import SharedLoyaut from './shared/components/SharedLoyaut/SharedLoyaut';
 import HomePage from './modules/pages/HomePage/HomePage';
 import MoviesPage from './modules/pages/MoviesPage/MoviesPage';
