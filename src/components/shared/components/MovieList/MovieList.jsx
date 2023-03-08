@@ -28,5 +28,4 @@ MovieList.propTypes = {
   movies: PropTypes.arrayOf(
     PropTypes.shape({ id: PropTypes.number, original_title: PropTypes.string })
   ),
-  onClick: PropTypes.func,
 };

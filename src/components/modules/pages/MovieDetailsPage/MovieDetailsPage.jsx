@@ -26,21 +26,15 @@ const MovieDetailPage = () => {
     fetchMovieDetail(movieId)
       .then(data => {
         setMovie(data);
+        fetchImage(data.poster_path).then(blob => {
+          setPoster(URL.createObjectURL(blob));
+        });
       })
       .catch(error => {
         setError(error.message);
-      });
+      })
+      .finally(() => setLoading(false));
   }, [movieId]);
-
-  useEffect(() => {
-    if (movie) {
-      fetchImage(movie.poster_path)
-        .then(blob => {
-          setPoster(URL.createObjectURL(blob));
-        })
-        .finally(() => setLoading(false));
-    }
-  }, [movie]);
 
   const releaseYear = new Date(movie?.release_date).getFullYear();
   const genres = movie?.genres.map(({ name }) => name).join(', ');

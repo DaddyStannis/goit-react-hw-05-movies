@@ -9,9 +9,13 @@ const CastPage = () => {
   const { movieId } = useParams();
 
   useEffect(() => {
-    fetchMovieCast(movieId).then(data => {
-      setCast(data.cast);
-    });
+    fetchMovieCast(movieId)
+      .then(data => {
+        setCast(data.cast);
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }, [movieId]);
 
   const elements = cast.map(actor => {

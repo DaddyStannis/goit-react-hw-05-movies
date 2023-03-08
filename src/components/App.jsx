@@ -19,7 +19,7 @@ export const App = () => {
     <Routes>
       <Route path="/" element={<SharedLoyaut />}>
         <Route index element={<HomePage />}></Route>
-        <Route path="search/search-movie/" element={<MoviesPage />}></Route>
+        <Route path="movies/" element={<MoviesPage />}></Route>
         <Route path="movies/:movieId" element={<MovieDetailPage />}>
           <Route path="cast" element={<CastPage />}></Route>
           <Route path="reviews" element={<ReviewsPage />}></Route>

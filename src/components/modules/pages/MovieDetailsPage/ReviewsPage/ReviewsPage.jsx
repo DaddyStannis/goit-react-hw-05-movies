@@ -9,9 +9,13 @@ const ReviewsPage = () => {
   const { movieId } = useParams();
 
   useEffect(() => {
-    fetchMovieReviews(movieId).then(data => {
-      setReviews(data.results);
-    });
+    fetchMovieReviews(movieId)
+      .then(data => {
+        setReviews(data.results);
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }, [movieId]);
 
   const elements = reviews.map(review => {
